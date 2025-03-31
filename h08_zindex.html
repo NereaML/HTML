@@ -6,10 +6,23 @@
     <title>Document</title>
     <link rel="stylesheet" tipe= "text/css" href="./css/h08.css" >
 
-
+<!-- En esto hacemos una funcion con un for que llama a un array, 
+ es un oyente de eventos ( evento onload de windows) -->
     <script>
+// Para traer al frente la caja que hacemos click ( )entre parentesis el nombre que queramos poner
+
+        let z = 1;
+        function traerAlFrente(evento){
+            let cajaActual = evento.currentTarget;
+            cajaActual.style.zIndex = z++;
+        }
+
+
         window.onload = function(){
-            
+            let cajas = document.getElementsByClassName('cajas');
+            for(let i= 0; i < cajas.length; i++){
+                cajas[i].onclick = traerAlFrente;
+            }        
         };
     </script>
 
@@ -17,18 +30,19 @@
 
 </head>
 <body>
-    <!-- div#contPrincipal>div#caja$*4>p>{Caja$} con esto escribimos de golpe todos los div con sus id y con sus parrafos -->
+    <!-- div#contPrincipal>div#caja$*4.cajas>p>{Caja$} con esto escribimos de golpe 
+     todos los div con sus id y con sus parrafos -->
     <div id="contPrincipal">
-        <div id="caja1">
+        <div id="caja1" class= 'cajas'>
             <p>Caja1</p>
         </div>
-        <div id="caja2">
+        <div id="caja2" class= 'cajas'>
             <p>Caja2</p>
         </div>
-        <div id="caja3">
+        <div id="caja3" class= 'cajas'>
             <p>Caja3</p>
         </div>
-        <div id="caja4">
+        <div id="caja4" class= 'cajas'>
             <p>Caja4</p>
         </div>
     </div>

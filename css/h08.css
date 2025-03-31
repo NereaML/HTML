@@ -2,7 +2,9 @@
     background-color: rgb(179, 214, 202);
     border: 2px solid;
     padding: 55px;
-    overflow: hidden
+    overflow: hidden;
+    width: 80px;
+    
 }
 
 

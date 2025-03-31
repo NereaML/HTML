@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" tipe= "text/css" href="./css/h09.css" >
+
+    <script>
+    
+          let secun;
+        function inicio(){
+            secun = document.getElementById(`subtitulo_secundario`);
+            secun.onclick = click_secun;
+        }
+
+        function click_secun(){
+            alert(`Hiciste click`);
+            // secun.innerText = "Me has hecho click";  
+        }
+
+        window.onload = inicio;
+            
+    </script>
+</head>
+
+
+
+<body>
+    <div id="contPrincipal">
+        <h1>Calculadora: </h1>
+        <form>
+            <label for= "v1" >Valor 1</label>
+            <input id="v1"type ="number" name="v1" >
+
+            <label for= "operador" >Operador</label>
+            <select id="operador" name="operador">
+                <option value= "+"> Suma</option>
+                <option value= "-"> Resta</option>
+                <option value= "*"> Multiplicación</option>
+                <option value= "/"> División</option>
+                
+            
+
+            </select>
+
+            <label for= "v2" >Valor 2</label>
+            <input id="v2"type ="number" name="v2" >
+
+            <button id="btnCalcular">Calcular</button>
+
+          
+            <p id="resultado"> 1239</p>
+
+        </form>
+
+    </div>
+
+    
+    
+</body>
+</html>
