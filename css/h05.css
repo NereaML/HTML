@@ -1,0 +1,23 @@
+
+h1 {
+    color:rgb(116, 16, 93);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#logo_w3c{
+    width: 40px
+}
+
+#contPrincipal{
+    background-color: rgb(237, 213, 233);
+    width: 40%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid;  
+    border-radius: 10px;
+    box-shadow: 15px 15px 20px rgb(186, 168, 184);
+}
+
+/* Al border le puedes poner tambien color, justo despues de solid */
+/* border-radius: 10 px esto redondea las esquinas y puedes poner los px que quieras para que lo redondee mas o menos */
+/* box-shadow: 15px 15px 20px gray; le pones un sombreado al cuadrado, se le puede poner tambien color y difuminar con el tercer valor */

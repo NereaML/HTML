@@ -1,0 +1,55 @@
+<!-- javascript evento-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo04</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h5 {
+            color:blue;
+        }
+        #subtitulo_primario{
+            width: 30%;
+            background-color: rgb(226, 43, 189);
+            color:white;
+            padding: 25px;        
+            margin: 30px 160px;
+            margin-bottom: 50px;
+        }
+    </style>
+
+    <script>
+        // codigo javascript, tambien podemos crear let secun dentro de la funcion pero solo se puede usar en esa funcion
+        let secun;
+        function inicio(){
+            secun = document.getElementById(`subtitulo_secundario`);
+            secun.onclick = click_secun;
+        }
+
+        function click_secun(){
+            // alert(`Hiciste click`); de esta forma sale una ventana emergente 
+            // De esta forma me cambia el texto y me pone lo que le diga
+            secun.innerText = "Me has hecho click";  
+        }
+
+        window.onload = inicio;
+    </script>
+
+
+</head>
+
+
+<body>
+    <h1>Titulo principal </h1>
+    <h2 id="subtitulo_primario">Esto es un h2</h2>
+    <h5 id="subtitulo_secundario"> Este es un h5</h5>
+    <p> Esto es un parrafo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, earum!</p>
+    <h5>Este es otro h5</h5>
+    <h2>Este es otro h2</h2>
+</body>
+</html>

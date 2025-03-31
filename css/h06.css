@@ -1,0 +1,52 @@
+h1 {
+    color:rgb(16, 54, 116);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+#tablaDatos{
+    font-family:'Times New Roman', Times, serif;
+    background-color: rgb(213, 224, 237);
+    width: 40%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid;  
+    box-shadow: 15px 15px 15px rgb(168, 179, 186);
+}
+
+#tablaDatos caption{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#tablaDatos thead th, #tablaDatos tfoot td{
+    background-color: rgb(177, 177, 227);
+    text-align: left;
+}
+td, th{
+    padding: 5px 10px;
+}
+
+#tablaDatos td:nth-child(4), #tablaDatos th:nth-child(4){
+    text-align: right;
+}
+
+#tablaDatos tbody tr:nth-child(odd){
+    background-color: rgb(198, 206, 222);
+}
+
+#tablaDatos tbody tr:hover{
+    background-color: rgb(75, 75, 195);
+    color:white
+}
+
+
+/* font-sice con 1.4em lo esta haciendo un 40% mas grande de lo que le corresponde. 1.10em es un 10% */
+/* font-weight: bold le hace que se en negrita */
+/* Al ponerle la coma eh el tercer #, le estamos diciendo que coja esos cambios para ambos datos */
+/* text-alingn: left lo lleva a la izq, pero se podria centrar o llevar a la derecha tambien */
+/* Si queremos que el pie sea completo hay que hacerlo en html en su propia tabla con colspan="4 */
+/* tbody tr:nth-child(even) para poner otro color a los pares  */
+/* tbody tr:hover{ el hover es para ponerle otro color a las celdas cuando pasas por encima el raton */

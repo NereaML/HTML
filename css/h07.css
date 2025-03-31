@@ -1,0 +1,19 @@
+#contPrincipal{
+    background-color: rgb(179, 214, 202);
+    border: 2px solid;
+    padding: 55px;
+    overflow: hidden
+}
+/* Le damos un fondo a todo el contenedor, con un borde y padding( margen en la izq) 
+con el overflow, controlamos cuando las cosas que contiene el contenedor son mas grandes que el 
+así conseguimos que ya el fondo ocupe todo */
+
+#contPrincipal div{
+    border: 1px solid;
+    padding: 30px; 
+    float: left; 
+    margin: 15px;
+}
+/* con esto le ponemos bordes a los hijos de div y padding agrandando los espacios y con el margen los separamos*/
+/* float: left = el hacerlo float, es como que lo saca del flujo normal y el contenedor lo separa de lo demás*/
+

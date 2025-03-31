@@ -1,0 +1,44 @@
+#contPrincipal{
+    background-color: rgb(179, 214, 202);
+    border: 2px solid;
+    padding: 55px;
+    overflow: hidden
+}
+
+
+#contPrincipal div{
+    border: 1px solid;
+    padding: 30px; 
+    /* float: left; al poner posicion absoliuta esto ya no se usa */
+    margin: 15px;
+    position: absolute;
+    /* opacity: 0.9; esto se puede usar para que sea mas transparente y se vea lo que hay detrás, el valor es entre 0 y 1 */
+}
+/* position: absolute; con posicion absoluta se colocan todas las cajas en el mismo lugar que es la 00 lo mas arriba y mas izq posible */
+
+/* Vamos a poner un color a cada caja, a posicionar las cajas con top y left
+y con z-index hacemos que el que tenga el valor mas alto se posicione delante */
+
+#caja1{
+    background-color: rgb(84, 184, 149);
+    top: 15px;
+    left: 15px;
+}
+#caja2{
+    background-color: rgb(64, 168, 132);
+    top: 30px;
+    left: 30px;
+    /* z-index: 5; */
+}
+#caja3{
+    background-color: rgb(40, 123, 94);
+    top: 45px;
+    left: 45px;
+}
+#caja4{
+    background-color: rgb(10, 79, 54);
+    top: 60px;
+    left: 60px;
+}
+
+/* y ahora haremos javascript para que cuando nos posicionemos encima de una caja la traiga adelante */
