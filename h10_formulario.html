@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" tipe= "text/css" href="./css/h10.css" >
+</head>
+
+
+
+<body>
+    <h1>Formulario:</h1>
+    <div id="contPrincipal">
+        <form action="recepcion_datos">
+            <label for = "nom">Nombre</label>
+            <input type = "text" name="nom" required placeholder="Ingresa tu nombre">
+
+
+            <label for = "ape">Apellidos</label>
+            <input type = "text" name="ape" required placeholder="Ingresa tu apellido">
+
+            <label for ="pwd">Contraseña</label>
+            <input type ="password" name="pwd" placeholder="Password">
+
+            <label for ="anyo">Año de nacimiento</label>
+            <input type ="number" value="1930" min="1900" max="2025" >
+
+            <label for ="fecha">Fecha de ingreso</label>
+            <input type = "date" name="fecha">
+
+            <label for ="email">Email</label>
+            <input type = "email" placeholder="email">
+
+            <label for ="codigo postal">Código postal</label>
+            <input type = "text" placeholder= "Código postal" pattern="[0-9]{5}">
+
+            <label for = "">Semana</label>
+            <input type = "week">
+
+            <label for = "">Hora</label>
+            <input type = "time">
+
+            <label for = "prov">Provincia</label>
+            <select name="prov">
+                <option value = "28">Madrid</option>
+                <option value = "17">Barcelona</option>
+                <option value = "45">Sevilla</option>
+            </select>
+
+            <label for = "aficiones">Aficiones</label>
+                <!-- <select name="aficiones" multiple> ponemos multipole para poder seleccionar mas de una opción-->
+                    <select name="aficiones">
+                    <option value = "1">Lectura</option>
+                    <option value = "2">Cine</option>
+                    <option value = "3">Deporte</option>
+                </select>
+
+            <div>
+                <label for = "fichero">Seleccione un fichero</label>
+                <input type = "file" name="fichero">
+
+            </div>
+            
+           
+            <div>
+                <p>Estado civil:</p>
+                <input type ="radio" name = "estadoCivil" value = "s" checked>
+                <label>Soltero</label>
+                <input type ="radio" name = "estadoCivil" value = "c">
+                <label>Casado</label>
+                <input type ="radio" name = "estadoCivil" value = "d">
+                <label>Disfrutón</label>
+            </div>
+
+            <label for ="publicidad">Acepta el envío de publicidad</label>
+            <input type ="checkbox" name="publicidad" value = "acepta">
+
+            
+ 
+            <button type = "submit">Enviar</button>
+            <button type = "reset">Reset</button>
+
+            
+        </form>
+    </div>
+    
+
+
+</body>
+
+</html>

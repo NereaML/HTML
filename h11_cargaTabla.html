@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos</title>
+    <link rel="stylesheet" tipe= "text/css" href="./css/h11.css" >
+
+    <script>
+
+        window.onload = function(){
+            document.getElementById("btnIns").onclick = cargaDatos;
+               
+        }
+    
+        function cargaDatos(){
+           let nombre = document.getElementById('nombre');
+           let apellidos = document.getElementById('apellidos');
+           
+            let tbody = document.querySelector('#tblDatos tbody');
+            let tr = document.createElement('tr');
+            tbody.appendChild(tr);
+            let tdNombre = document.createElement('td');
+            tdNombre.textContent = nombre.value;
+            tr.appendChild(tdNombre);
+
+           
+            let tdApellidos = document.createElement('td');
+            tdApellidos.textContent = apellidos.value;
+            tr.appendChild(tdApellidos);
+
+            nombre.value = ""
+            apellidos.value = ""
+         
+        }
+          
+        </script>
+</head>
+
+
+<body>
+
+    <h1>Carga datos:</h1>
+    <div id="divIngreso">
+        <label>Nombre</label>
+        <input type="text" id="nombre" required placeholder="Ingresa un nombre">
+
+        <label>Apellidos</label>
+        <input type="text" id="apellidos" required placeholder="Ingresa un apellido">
+
+        <button id="btnIns"> Insertar</button>
+       
+
+        <p id="resul"> </p>
+
+    </div>
+
+    <table id="tblDatos">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- <tr>
+                <td>Juan</td>
+                <td>Jimenez</td>
+            </tr> -->
+        </tbody>
+
+    </table>
+    
+</body>
+</html>

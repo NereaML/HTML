@@ -7,20 +7,41 @@
     <link rel="stylesheet" tipe= "text/css" href="./css/h09.css" >
 
     <script>
-    
-          let secun;
-        function inicio(){
-            secun = document.getElementById(`subtitulo_secundario`);
-            secun.onclick = click_secun;
-        }
 
-        function click_secun(){
-            alert(`Hiciste click aqui`);
-            // secun.innerText = "Me has hecho click";  
-        }
+    window.onload = function(){
+        document.getElementById("btnCalcular").onclick = calcular;
+           
+    }
 
-        window.onload = inicio;
-            
+    function calcular(){
+       let v1 = Number(document.getElementById('v1').value);
+
+       let operador = document.getElementById('operador').value;
+       
+       let v2 = Number (document.getElementById('v2').value);
+
+     
+       let resultado
+
+
+       switch(operador){
+
+        case "+": resultado = v1 + v2;
+        break;
+        case "-": resultado = v1 - v2;
+        break;
+        case "*": resultado = v1 * v2;
+        break;
+        case "/": resultado = v1 / v2;
+        break;
+
+       }
+       
+       document.getElementById("resultado").textContent = resultado
+
+    }
+      
+      
     </script>
 </head>
 
@@ -29,7 +50,7 @@
 <body>
     <div id="contPrincipal">
         <h1>Calculadora: </h1>
-        <form>
+    
             <label for= "v1" >Valor 1</label>
             <input id="v1"type ="number" name="v1" >
 
@@ -50,9 +71,9 @@
             <button id="btnCalcular">Calcular</button>
 
           
-            <p id="resultado"> 1239</p>
+            <p id="resultado"> </p>
 
-        </form>
+       
 
     </div>
 
