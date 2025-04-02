@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" tipe= "text/css" href="./css/formulario.css" >
+</head>
+
+
+
+<body>
+    <h1>Mi aplicacion</h1>
+    <div id="contPrincipal">
+        <form action="http://10.1.2.10:8080/mi_app/login" method ="post">
+            <label for = "usu">Usuario:</label>
+            <input type = "text" name="usuario" required placeholder="Ingresa tu usuario">
+
+            <label for ="pwd">Contraseña:</label>
+            <input type ="password" name="password" placeholder="Password">
+ 
+            <button id="btnLogin" type = "submit">Login</button>
+
+            <a href =" http://10.1.2.10:8080/mi_app/password"> He olvidado mi contraseña</a>
+           
+ 
+        </form>
+    </div>
+    
+
+
+</body>
+
+</html>

@@ -11,7 +11,7 @@
 #contPrincipal div{
     border: 1px solid;
     padding: 30px; 
-    /* float: left; al poner posicion absoliuta esto ya no se usa */
+    /* float: left; al poner posicion absoluta esto ya no se usa */
     margin: 15px;
     position: absolute;
     /* opacity: 0.9; esto se puede usar para que sea mas transparente y se vea lo que hay detrás, el valor es entre 0 y 1 */
