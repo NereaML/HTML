@@ -30,9 +30,15 @@
             
         }
 
+        function cambio(){
+            let t = document.getElementById('tiempo');
+            t.textContent = video.currentTime + 's ';
+        }
+
         window.onload = function(){   
             video = document.getElementById('video');
             video.onclick= playPause;
+            video.ontimeupdate = cambio;
             btnPlay = document.getElementById('btnPlay');
             btnPlay.onclick= playPause;
 
@@ -51,6 +57,7 @@
         </video>
         <div>
             <button id="btnPlay">Play</button>
+            <div id="tiempo">0 s</div>
         </div>
     </div>
 

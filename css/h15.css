@@ -1,0 +1,46 @@
+.contenedor{
+    border: 1px solid blueviolet;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr;   /*  fr= fracción, lo divide en 3 columnas en este caso, ocupa 1 tercio en este caso*/
+    grid-auto-rows: 100px;  /* tamaño de las filas, el alto */
+    grid-gap: 3px;  /* separa las celdas */
+}
+
+
+/* Aqui solo atacamos a los hijos */
+.contenedor > div{
+    border: 1px solid;
+    padding: 10px;
+    background-color: rgb(225, 213, 237);
+}
+
+#caja1{
+    grid-row: 1/3;
+    grid-column: 1/4;
+} 
+
+#caja2{
+    grid-row-start: 3;
+    grid-column-start:1;
+    grid-row-end: 5;
+    grid-column-end:2 ;
+} 
+
+
+
+
+/* #caja1{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 4;
+} Esto es lo mismo que en caja uno pero paso a paso*/
+
+
+/* #caja1{
+    grid-area: 1/1/2/4;
+} Esto es otra forma mas para caja uno pero paso a paso, coje fila columna, fila columna, ene se orden*/ 
+
+
+ /* grid-template-columns: 1fr 2fr 1fr; se le puede dar el tamaño que quieras */

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    h1{
+        color: rgb(47, 96, 96);
+    }
+     img{
+        width: 140px;
+        
+     }
+
+     .destino{
+        background-color: rgb(199, 227, 236);
+        width: 150px;
+        height: 350px;
+        padding: 10px;
+        float:left;
+        margin: 15px;
+     }
+
+     .movil{
+        margin: 20px auto;
+        border: 1px solid;
+        padding: 3px;
+     }
+
+    </style>
+
+    <script>
+
+
+        window.onload = function(){
+            // let moviles = document.getElementsByClassName('movil') hace lo mismo que querySelectorAll;
+            let moviles = document.querySelectorAll('.movil');
+            for(let i = 0; i < moviles.length; i++){
+                moviles[i].ondragstart = iniciar;
+            }
+
+           
+
+            let destinos = document.querySelectorAll('.destino');
+            for( let i = 0; i < destinos.length; i++){
+                // destinos[i].ondragover = arrastrar hace lo mismo que add.EventListener;
+                destinos[i].addEventListener('dragover', arrastrar)
+                destinos[i].addEventListener('drop', soltar);
+            }
+        };
+
+        function iniciar(ev){
+            ev.dataTransfer.setData('movilId', ev.currentTarget.id);
+        } 
+
+        function arrastrar(ev){
+            ev.preventDefault();
+        } 
+
+        function soltar(ev){
+            let movil = document.getElementById (ev.dataTransfer.getData('movilId'));
+            let destino = ev.currentTarget;
+            destino.appendChild(movil);  //con esto haces que sea su hijo y asi se pueda mover
+        }
+
+
+    </script>
+
+
+</head>
+
+
+
+<body>
+    <h1>Arrastrar y soltar:</h1>
+
+    <!-- div.destino*3>div#movil$.movil*3>img -->
+    <div class="destino">
+        <div id="movil1" class="movil"><img src="img/imag.jpeg" alt="Girasoles"></div>
+        <div id="movil2" class="movil"><img src="img/image.jpeg" alt="Africa"></div>
+        <div id="movil3" class="movil"><img src="img/images.jpeg" alt="Bosque"></div>
+    </div>
+
+    <div class="destino"> </div>
+
+    <div class="destino"> </div>
+
+    
+</body>
+</html>
