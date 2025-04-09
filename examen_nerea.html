@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        h1{
+            color: rgb(120, 120, 120);
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+    </style>
+
+    <script>
+
+window.onload = function(){
+        document.getElementById("btnClasificar").onclick = clasificar;
+           
+    }
+
+    function clasificar(){
+       let valor = Number(document.getElementById('valor').value);;
+       let valor_par;
+       let valor_impar;
+       let positivo;
+       let negativo;
+       let resultado;
+       let resultadoDos;
+       let resultadoTres;
+       let cantidadDigitos = 1;
+
+
+if(valor % 2 == 0){
+    valor_par ++;
+    resultado=("Es par")
+}
+else {  
+    valor_impar ++;
+    resultado=("Es impar")
+}
+
+document.getElementById("resultado").textContent = resultado
+
+
+
+if(valor >= 0){ 
+    positivo++;
+    resultadoDos=( "Es positivo")
+
+} else if(valor < 0) {
+    negativo++ ;
+    resultadoDos=( "Es negativo")
+
+}
+
+document.getElementById("resultadoDos").textContent = resultadoDos
+
+
+if(valor % 3 == 0){  
+       
+    resultadoTres=("Es multiplo de 3");    
+
+}else{
+    resultadoTres=("No es multiplo de 3")
+}
+
+document.getElementById("resultadoTres").textContent = resultadoTres
+
+for(let i= 1; i<= valor;i++){  
+     cantidadDigitos += 1
+   }
+   cantidadDigitos=("Tiene "+ cantidadDigitos + " digito"); 
+   
+   document.getElementById("cantidadDigitos").textContent = cantidadDigitos
+    
+}
+
+    </script>
+</head>
+<body>
+
+    <div id="contPrincipal"></div>
+
+        <h1>Ejercicio 3</h1>
+
+        <h2>Indicar la característica de un número</h2>
+
+            <label for = "valor">Ingrese un valor entero</label>
+            <input id="valor" type="number">
+
+                <button id="btnClasificar">clasificar</button>
+                <p id="resultado"> </p>
+                <p id="resultadoDos"> </p>
+                <p id="resultadoTres"> </p>
+                <p id="cantidadDigitos"> </p>
+    </div>
+    
+</body>
+</html>

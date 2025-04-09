@@ -1,0 +1,54 @@
+header{
+    position: relative;
+    background-size: cover;  /* O 'contain' dependiendo de cómo quieras que se ajuste */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat;  /* Evita que la imagen se repita */
+    font-size: xx-large;
+    margin: 20px auto;
+    text-align: center;
+    padding: 15px;
+    background-image: url('/imagenes_html/banner01.png'); 
+   
+}
+
+nav {
+    background-color: #78a0bb;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+nav a {
+    color: white;
+    text-decoration: none;  /* Esto quita el subrayado de los enlaces */
+    padding: 5px 10px;
+}
+nav a:hover {
+    background-color: rgb(97, 116, 137);
+}
+
+p {
+    text-align: left;
+    margin-bottom: 5px; 
+    font-size: 16px;
+}
+
+.contenido {
+    display: flex;  /* Alinea los elementos en la misma fila (horizontalmente) */
+    gap: 20px;  /* Espacio entre los párrafos y la imagen */
+    align-items: center;  /* Centra la imagen alineada a los parrafos */
+    
+}
+
+.texto {
+    max-width: 70%;  /* Limita el ancho de los párrafos, asegurando que la imagen tenga espacio */
+}
+
+.contenido img {
+    height: auto;  /* La imagen mantiene su proporción */
+    max-height: 300px;  /* Limita la altura máxima de la imagen */
+    width: auto;  /* Mantiene las proporciones de la imagen */
+} 
+
+main{
+    padding: 10px;
+}

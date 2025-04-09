@@ -40,44 +40,21 @@
 
 
     function numeros(ev){
-
-        num += ev.currentTarget.textContent;
-        display.value = num;
-
+        num1 += ev.currentTarget.textContent;
+        display.value = num1;
     }
 
-    function operadores(ev){
-        operadorActual = ev.currentTarget.textContent;
-        num1 = num;
-        num = " ";    
-
+    function operadores(ev){   
+        num1 += ev.currentTarget.textContent;
+        display.value = num1;   
     }
 
     function resultado(){
-    
-        num2 = num;
-        let res = 0;
-        num1 = parseFloat(num1);
-        num2 = parseFloat(num2);
-
-
-// con if o switch
-        if(operadorActual == "+"){
-            res = num1 + num2;
-        }else if(operadorActual == "-"){
-            res = num1 - num2;
-        }else if( operadorActual == "*"){
-            res = num1 * num2;
-        }else if(operadorActual == "/"){
-            res = num1 / num2
-        }
-
-        display.value = res; 
-        num = " ";
-        num1 = " ";
-        num2 = " ";
-        operadorActual = " ";
-        
+        resul1 = num1 + operadorActual;
+        let resultadoCalculado = eval(num1);
+        display.value = resultadoCalculado;
+        num = resultadoCalculado;
+        operadorActual = "";       
     }
        
 
