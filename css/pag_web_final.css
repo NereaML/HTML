@@ -1,0 +1,125 @@
+
+/* Para ocultar todas las secciones por defecto */
+section {
+    display: none;
+}
+
+/* Mostrar las secciones activas */
+section.active {
+    display: block;
+}
+
+nav {
+    background-color: #78a0bb;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    background-color: rgb(97, 116, 137);
+}
+
+/* Asegúrate de que html y body ocupen el 100% del alto */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* El contenido principal debe crecer para ocupar el espacio */
+main {
+    flex: 1;
+}
+
+
+
+
+/* Mio */
+
+
+header { 
+    background-image: url('/imagenes_html/banner8.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 180px;
+  
+}
+  
+  nav {
+      background-color: #78a0bb;
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+  }
+  nav a {
+      color: white;
+      text-decoration: none;  /* Esto quita el subrayado de los enlaces */
+      padding: 5px 10px;
+  }
+  nav a:hover {
+      background-color: rgb(97, 116, 137);
+  }
+
+
+  
+  p {
+      text-align: left;
+      margin-bottom: 5px; 
+      font-size: 16px;
+  }
+  
+  .contenido {
+      display: flex;  /* Alinea los elementos en la misma fila (horizontalmente) */
+      gap: 20px;  /* Espacio entre los párrafos y la imagen */
+      align-items: center;  /* Centra la imagen alineada a los parrafos */
+      
+  }
+  
+  .texto {
+      max-width: 70%;  /* Limita el ancho de los párrafos, asegurando que la imagen tenga espacio */
+  }
+  
+  .contenido img {
+      height: auto;  /* La imagen mantiene su proporción */
+      max-height: 300px;  /* Limita la altura máxima de la imagen */
+      width: auto;  /* Mantiene las proporciones de la imagen */
+  } 
+  
+  main{
+      padding: 10px;
+  }
+  
+  form input, form textarea, form button {
+      display: block;
+      width: 30%;
+      margin-bottom: 10px;
+      padding: 8px;
+  }
+  
+
+
+footer p { 
+    height: 50px;
+    color: black;
+    text-align: center;
+    padding-top: 1%;
+  
+
+}
+footer{
+    background-image: url('/imagenes_html/banner13.avif'); 
+    background-size: cover; 
+    background-position: center; 
+    z-index: auto;
+} 
+  
+  
+  

@@ -1,14 +1,10 @@
-header{
-    position: relative;
-    background-size: cover;  /* O 'contain' dependiendo de cómo quieras que se ajuste */
-    background-position: center;  /* Centra la imagen */
-    background-repeat: no-repeat;  /* Evita que la imagen se repita */
-    font-size: xx-large;
-    margin: 20px auto;
-    text-align: center;
-    padding: 15px;
-    background-image: url('/imagenes_html/banner01.png'); 
-   
+
+header { 
+  background-image: url('/imagenes_html/banner8.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  height: 300px;
+
 }
 
 nav {
@@ -52,3 +48,20 @@ p {
 main{
     padding: 10px;
 }
+
+form input, form textarea, form button {
+    display: block;
+    width: 30%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+footer {
+    background-color: #78a0bb;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 30px;
+}
+
+
